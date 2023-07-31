@@ -32,7 +32,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.5",
-    "cly-cli": "^1.0.1",
+    "cpy-cli": "^5.0.0",
     "jest": "^29.6.2",
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
