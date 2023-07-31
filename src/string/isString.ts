@@ -1,6 +1,8 @@
 import { isNumber } from "../number/isNumber";
 
-export function isString(target: unknown, options?: { minLength?: number, maxLength?: number }): boolean {
+import { TIsStringOptions } from "../types/string.types";
+
+export function isString(target: unknown, options?: TIsStringOptions): boolean {
     if (typeof target !== 'string') {
         return false;
     }

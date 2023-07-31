@@ -1,6 +1,8 @@
 import { isNumber } from "../number/isNumber";
 
-export function isArray(target: unknown, options?: { minLength?: number, maxLength?: number }): boolean {
+import { TIsArrayOptions } from "../types/array.types";
+
+export function isArray(target: unknown, options?: TIsArrayOptions): boolean {
     if (!Array.isArray(target)) {
         return false;
     }
