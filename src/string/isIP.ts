@@ -1,5 +1,7 @@
 import { isString } from "./isString";
 
+import { TIsIPOptions } from "../types/string.types";
+
 const IPv4SegmentFormat = '(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])';
 const IPv4AddressFormat = `(${IPv4SegmentFormat}[.]){3}${IPv4SegmentFormat}`;
 const IPv4AddressRegExp = new RegExp(`^${IPv4AddressFormat}$`);
@@ -16,7 +18,7 @@ const IPv6AddressRegExp = new RegExp('^(' +
   `(?::((?::${IPv6SegmentFormat}){0,5}:${IPv4AddressFormat}|(?::${IPv6SegmentFormat}){1,7}|:))` +
   ')(%[0-9a-zA-Z-.:]{1,})?$');
 
-export function isIP(target: string, options?: { version?: '4' | '6' }): boolean {
+export function isIP(target: string, options?: TIsIPOptions): boolean {
     if (!isString(target)) {
         return false;
     }

@@ -1,4 +1,6 @@
-export function isNumber(target: unknown, options?: { min?: number, max?: number }) {
+import { TIsNumberOptions } from "../types/number.types";
+
+export function isNumber(target: unknown, options?: TIsNumberOptions) {
     if (typeof target !== 'number' || Number.isNaN(target)) {
         return false;
     }

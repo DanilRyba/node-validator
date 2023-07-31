@@ -1,4 +1,6 @@
-export function isObject(target: unknown, options?: { nonEmpty?: boolean }): boolean {
+import { TIsObjectOptions } from "../types/object.types";
+
+export function isObject(target: unknown, options?: TIsObjectOptions): boolean {
     if (target === null || typeof target !== 'object' || Array.isArray(target)) {
         return false;
     }
