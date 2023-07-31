@@ -1,0 +1,42 @@
+{
+  "name": "@danilryba/node-validator",
+  "version": "0.1.0",
+  "description": "Validator for TS/JS projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanilRyba/node-validator.git"
+  },
+  "homepage": "https://github.com/DanilRyba/node-validator#readme",
+  "bugs": {
+    "url": "https://github.com/DanilRyba/node-validator/issues"
+  },
+  "scripts": {
+    "build": "tsc -P tsconfig.build.json",
+    "build:clean": "rimraf ./lib && npm run build",
+    "copy-for-publish": "cpy package.json LICENSE README.md lib/",
+    "publish:remote": "npm run build:clean && npm run copy-for-publish && cd lib && npm publish",
+    "test": "jest --clearCache && jest",
+    "set-version": "npm --no-git-tag-version version"
+  },
+  "keywords": [
+    "validators",
+    "class",
+    "validation",
+    "decorators",
+    "validator",
+    "validate"
+  ],
+  "author": "Danil Rybalchenko <danil.ryba01@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.5",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
